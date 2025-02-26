@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const bookController = require("../Controllers/bookController");
+const bookController = require("../Controllers/bookController.js");
 
 // Put search route before other routes to prevent path conflicts
 router.get("/search", bookController.searchBooks);
