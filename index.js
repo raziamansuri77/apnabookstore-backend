@@ -11,6 +11,7 @@ require("dotenv").config();
 const authenticate = require("./middleware/authMiddleware");
 const errorHandler = require("./middleware/errorHandler");
 
+//middlewares Setup
 app.use(cors());
 app.use(express.json());
 app.use(bodyParser.json());
@@ -18,6 +19,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const PORT = process.env.PORT || 8080;
 // Routes
+app.get("/test", (req, res) => {
+  res.send("Welcome to Apna Bookstore API-------");
+});
+
+app.get("/", (req, res) => {
+  res.send("Welcome to Apna Bookstore API");
+});
+
 app.use("/api/v1", authRoutes);
 app.use("/api/v1/books", bookRoutes);
 
