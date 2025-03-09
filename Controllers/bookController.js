@@ -62,7 +62,6 @@ exports.deleteBook = async (req, res) => {
   }
 };
 
-// Add this new method to existing bookController.js
 exports.searchBooks = async (req, res) => {
   try {
     const { query } = req.query;
